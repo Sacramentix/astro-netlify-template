@@ -1,0 +1,23 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<style lang="scss" is:global>
+footer {
+	margin-top: auto;
+	[astro-icon] {
+		width: auto;
+	}
+}
+</style>
+
+<footer>
+	<slot></slot>
+	<a target="_blank" href="https://astro.build">
+		<Icon name="logos:astro"/> Made with Astro
+	</a>
+	<a target="_blank" href="https://www.netlify.com">
+		<Icon name="logos:netlify"/> Hosted by Netlify
+	</a>
+</footer>
+

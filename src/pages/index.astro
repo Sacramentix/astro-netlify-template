@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Markdown } from '@astropub/md';
+
+import type { LandingFields } from './index.collection';
+
+import { frontmatter } from './index.content.md';
+
+const { title, hero, subtitle, text } = frontmatter as LandingFields;
+
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<h1>{title}</h1>
+		<div><Markdown of={hero} /></div>
+		<h2>{subtitle}</h2>
+		<div><Markdown of={text} /></div>
+	</main>
+</Layout>
+
+<style is:global lang="scss">
+
+</style>
